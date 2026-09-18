@@ -946,6 +946,83 @@ body.menu-open {
   .focus { padding: 72px var(--gutter); }
 }
 
+/* ---------- CÓMO TRABAJAMOS ---------- */
+.process {
+  padding: 92px var(--gutter);
+  background: var(--c-navy);
+  color: var(--c-cream);
+}
+.process__header {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+.process__header .section-eyebrow { color: var(--c-orange); }
+.process__title {
+  color: var(--c-cream);
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.process__title em { color: var(--c-orange); font-style: italic; }
+.process__lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(231, 225, 217, 0.8);
+  margin: 0;
+}
+.process__steps {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  counter-reset: step;
+}
+.step {
+  position: relative;
+  padding-top: 22px;
+  border-top: 2px solid rgba(220, 111, 73, 0.4);
+}
+.step__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--c-orange);
+  margin-bottom: 14px;
+  letter-spacing: -0.03em;
+}
+.step__title {
+  color: var(--c-cream);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.step__text {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: rgba(231, 225, 217, 0.82);
+  margin: 0;
+}
+.process__note {
+  max-width: var(--container);
+  margin: 44px auto 0;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(231, 225, 217, 0.72);
+}
+.process__note strong { color: var(--c-orange); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .process__steps { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
+}
+@media (max-width: 520px) {
+  .process__steps { grid-template-columns: 1fr; }
+}
+
 /* ---------- PLANES / PAQUETES ---------- */
 .plans {
   padding: 92px var(--gutter);
@@ -997,6 +1074,15 @@ body.menu-open {
 /* Paneles */
 .plans__panel { max-width: var(--container); margin: 0 auto; }
 .plans__panel[hidden] { display: none; }
+.plans__panel-intro {
+  max-width: 760px;
+  margin: 0 auto 30px;
+  text-align: center;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: rgba(28, 55, 91, 0.8);
+}
+.plans__panel-intro strong { color: var(--c-navy); }
 .plans__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

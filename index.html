@@ -69,6 +69,7 @@
 
       <nav class="nav__links" aria-label="Navegación principal">
         <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
         <a href="#planes">Planes</a>
         <a href="#sobre">Sobre SIMMA</a>
         <a href="#contacto">Contacto</a>
@@ -93,18 +94,23 @@
         <span class="mobile-menu__label">Servicios</span>
         <span class="mobile-menu__arrow" aria-hidden="true">›</span>
       </a>
-      <a href="#planes" class="mobile-menu__link">
+      <a href="#proceso" class="mobile-menu__link">
         <span class="mobile-menu__num">02</span>
+        <span class="mobile-menu__label">Proceso</span>
+        <span class="mobile-menu__arrow" aria-hidden="true">›</span>
+      </a>
+      <a href="#planes" class="mobile-menu__link">
+        <span class="mobile-menu__num">03</span>
         <span class="mobile-menu__label">Planes</span>
         <span class="mobile-menu__arrow" aria-hidden="true">›</span>
       </a>
       <a href="#sobre" class="mobile-menu__link">
-        <span class="mobile-menu__num">03</span>
+        <span class="mobile-menu__num">04</span>
         <span class="mobile-menu__label">Sobre SIMMA<span class="dot">.</span></span>
         <span class="mobile-menu__arrow" aria-hidden="true">›</span>
       </a>
       <a href="#contacto" class="mobile-menu__link">
-        <span class="mobile-menu__num">04</span>
+        <span class="mobile-menu__num">05</span>
         <span class="mobile-menu__label">Contacto</span>
         <span class="mobile-menu__arrow" aria-hidden="true">›</span>
       </a>
@@ -427,6 +433,63 @@
     </div>
   </section>
 
+  <!-- ============ CÓMO TRABAJAMOS ============ -->
+  <section class="process" id="proceso">
+    <header class="process__header">
+      <p class="section-eyebrow">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#asterisk" /></svg>
+        Cómo trabajamos
+      </p>
+      <h2 class="process__title">
+        Un proceso claro, <em>paso a paso</em>.
+      </h2>
+      <p class="process__lead">
+        Nada de humo ni promesas sueltas. Así es el camino desde que nos escribís hasta que tu marca
+        funciona de forma ordenada y sola.
+      </p>
+    </header>
+
+    <ol class="process__steps">
+      <li class="step">
+        <span class="step__num">01</span>
+        <h3 class="step__title">Diagnóstico</h3>
+        <p class="step__text">
+          Visitamos tu negocio y miramos cómo funciona hoy: la atención, los procesos y la comunicación.
+          Te entregamos un informe claro de qué está bien y qué conviene mejorar.
+        </p>
+      </li>
+      <li class="step">
+        <span class="step__num">02</span>
+        <h3 class="step__title">Orden y estrategia</h3>
+        <p class="step__text">
+          Documentamos tu identidad y definimos tus canales. Según el plan, sumamos guías de hospitalidad
+          y el diseño de tus procesos internos, para que tu equipo sepa cómo actuar en cada situación.
+        </p>
+      </li>
+      <li class="step">
+        <span class="step__num">03</span>
+        <h3 class="step__title">Puesta en marcha</h3>
+        <p class="step__text">
+          Lo llevamos a la práctica: contenido y sesiones de fotos para tus redes, o la optimización de
+          procesos y herramientas digitales. Acá empezás a ver los primeros resultados.
+        </p>
+      </li>
+      <li class="step">
+        <span class="step__num">04</span>
+        <h3 class="step__title">Seguimiento y ajuste</h3>
+        <p class="step__text">
+          Reuniones periódicas, informes de resultados y métricas, y acompañamiento continuo para
+          seguir mejorando mes a mes. No te dejamos sola después de entregar.
+        </p>
+      </li>
+    </ol>
+
+    <p class="process__note">
+      Los primeros <strong>45 días</strong> son de puesta a punto (diagnóstico y primeras entregas).
+      A partir del <strong>segundo mes</strong> entramos en un ritmo mensual de producción, seguimiento y ajuste.
+    </p>
+  </section>
+
   <!-- ============ PLANES / PAQUETES ============ -->
   <section class="plans" id="planes">
     <header class="plans__header">
@@ -438,7 +501,9 @@
         Paquetes para <em>profesionalizar</em> tu marca.
       </h2>
       <p class="plans__lead">
-        Dos líneas de trabajo pensadas para gastronomía y hospitalidad. Elegí la que necesitás hoy.
+        Trabajamos en dos líneas, según lo que tu negocio necesita hoy. Una se enfoca en cómo te ve
+        el cliente <strong>afuera</strong> (tu comunicación y tus redes); la otra, en cómo funciona tu local
+        <strong>puertas adentro</strong> (tus procesos y la atención). Elegí una abajo, y si tenés dudas te ayudamos a decidir.
       </p>
 
       <div class="plans__tabs" role="tablist" aria-label="Líneas de planes">
@@ -453,6 +518,11 @@
 
     <!-- Panel: Redes -->
     <div class="plans__panel is-active" id="panel-redes" role="tabpanel" aria-labelledby="tab-redes" data-panel="redes">
+      <p class="plans__panel-intro">
+        <strong>Para mejorar cómo te ve el cliente afuera.</strong> Ideal si querés una presencia sólida en redes,
+        contenido constante y una imagen coherente. Incluye una puesta a punto inicial de 45 días y, a partir de ahí,
+        un trabajo mensual continuo (por eso ves un monto inicial + una cuota mensual).
+      </p>
       <div class="plans__grid">
 
         <article class="plan">
@@ -520,6 +590,11 @@
 
     <!-- Panel: Experiencia del cliente -->
     <div class="plans__panel" id="panel-cx" role="tabpanel" aria-labelledby="tab-cx" data-panel="cx" hidden>
+      <p class="plans__panel-intro">
+        <strong>Para ordenar cómo funciona tu local puertas adentro.</strong> Ideal si querés profesionalizar
+        tus procesos, la atención y las herramientas de trabajo. Es un proyecto por tiempo definido (de 1 a 3 meses),
+        con un pago único por paquete y sin cuota mensual.
+      </p>
       <div class="plans__grid">
 
         <article class="plan">
