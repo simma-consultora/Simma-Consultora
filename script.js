@@ -139,6 +139,41 @@ window.addEventListener("resize", () => {
   }
 });
 
+/* ---------- Acordeón de servicios ---------- */
+const servicesList = document.querySelector(".services__list");
+if (servicesList) {
+  const services = Array.from(servicesList.querySelectorAll(".service"));
+
+  services.forEach((service, i) => {
+    const head = service.querySelector(".service__head");
+    const panel = service.querySelector(".service__panel");
+    if (!head || !panel) return;
+
+    // Estado inicial: solo el primero abierto
+    const startClosed = i !== 0;
+    service.classList.toggle("is-closed", startClosed);
+    if (!panel.id) panel.id = "service-panel-" + (i + 1);
+    head.setAttribute("aria-expanded", String(!startClosed));
+    head.setAttribute("aria-controls", panel.id);
+
+    head.addEventListener("click", () => {
+      const willOpen = service.classList.contains("is-closed");
+      // Cerrar los demás (comportamiento acordeón: uno a la vez)
+      services.forEach((other) => {
+        if (other !== service) {
+          other.classList.add("is-closed");
+          other.querySelector(".service__head")?.setAttribute("aria-expanded", "false");
+        }
+      });
+      service.classList.toggle("is-closed", !willOpen);
+      head.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
+  // Habilitar transiciones después del primer frame (evita el flash de colapso)
+  requestAnimationFrame(() => servicesList.classList.add("services--ready"));
+}
+
 /* ---------- Formulario de contacto ---------- */
 const form = document.getElementById("contact-form");
 const statusEl = document.getElementById("form-status");

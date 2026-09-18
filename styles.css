@@ -636,7 +636,7 @@ body.menu-open {
 
 /* ---------- INTRO ---------- */
 .intro {
-  padding: 120px var(--gutter);
+  padding: 88px var(--gutter);
   background: var(--c-cream-warm);
   position: relative;
 }
@@ -676,7 +676,7 @@ body.menu-open {
 
 /* ---------- SERVICIOS ---------- */
 .services {
-  padding: 130px var(--gutter);
+  padding: 92px var(--gutter);
   background: var(--c-navy);
   color: var(--c-cream);
   position: relative;
@@ -696,7 +696,7 @@ body.menu-open {
 
 .services__header {
   max-width: var(--container);
-  margin: 0 auto 80px;
+  margin: 0 auto 56px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -711,10 +711,10 @@ body.menu-open {
 .services__title em { color: var(--c-orange); font-style: italic; }
 
 .services__list {
-  max-width: var(--container);
+  max-width: 920px;
   margin: 0 auto;
   display: grid;
-  gap: 32px;
+  gap: 16px;
   position: relative;
   z-index: 1;
 }
@@ -723,57 +723,101 @@ body.menu-open {
   background: rgba(231, 225, 217, 0.04);
   border: 1px solid rgba(231, 225, 217, 0.12);
   border-radius: var(--radius-card);
-  padding: 44px;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 56px;
-  align-items: start;
-  transition: all .5s var(--ease-out);
+  transition: border-color .4s var(--ease-out), background .4s var(--ease-out);
   position: relative;
   overflow: hidden;
 }
-.service::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(220, 111, 73, 0) 0%, rgba(220, 111, 73, 0.08) 100%);
-  opacity: 0;
-  transition: opacity .5s var(--ease-out);
-  pointer-events: none;
+/* Servicio abierto: leve realce */
+.service:not(.is-closed) {
+  border-color: rgba(220, 111, 73, 0.4);
+  background: rgba(231, 225, 217, 0.06);
 }
-.service:hover {
-  border-color: rgba(220, 111, 73, 0.5);
-  transform: translateY(-4px);
-}
-.service:hover::before { opacity: 1; }
+.service:hover { border-color: rgba(220, 111, 73, 0.5); }
 
-.service__head { position: relative; }
+/* Cabecera clickeable (botón acordeón) */
+.service__head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 24px 32px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+}
 .service__roman {
-  display: inline-block;
+  flex-shrink: 0;
+  min-width: 46px;
   font-family: var(--font-display);
-  font-size: 4.5rem;
+  font-size: 2.3rem;
   font-weight: 300;
   line-height: 1;
   color: var(--c-orange);
-  margin-bottom: 20px;
   letter-spacing: -0.04em;
 }
 .service__title {
+  flex: 1;
   color: var(--c-cream);
-  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
   font-weight: 600;
-  margin-bottom: 16px;
+  margin: 0;
+}
+/* Chevron animado */
+.service__chevron {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+}
+.service__chevron::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--c-orange);
+  border-bottom: 2px solid var(--c-orange);
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .4s var(--ease-out);
+}
+.service:not(.is-closed) .service__chevron::before {
+  transform: translateY(2px) rotate(-135deg);
+}
+
+/* Panel colapsable (truco grid 0fr → 1fr) */
+.service__panel {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+/* La transición se habilita recién cuando el JS marca el acordeón listo,
+   para no animar el colapso inicial al cargar la página. */
+.services--ready .service__panel {
+  transition: grid-template-rows .45s var(--ease-out);
+}
+.service.is-closed .service__panel {
+  grid-template-rows: 0fr;
+}
+.service__panel-inner {
+  overflow: hidden;
+  min-height: 0;
+  padding: 0 32px 30px;
 }
 .service__lead {
   font-size: 0.98rem;
   line-height: 1.6;
   color: rgba(231, 225, 217, 0.78);
+  margin: 0 0 24px;
+  max-width: 70ch;
 }
 
 .service__body {
   display: grid;
-  gap: 26px;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 40px;
 }
+.service__block--takeaway { grid-column: 1 / -1; }
 .service__block h4 {
   color: var(--c-orange);
   font-size: 0.78rem;
@@ -813,15 +857,17 @@ body.menu-open {
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
-@media (max-width: 900px) {
-  .service { grid-template-columns: 1fr; gap: 32px; padding: 32px; }
-  .service__roman { font-size: 3.5rem; }
+@media (max-width: 720px) {
+  .service__head { padding: 20px 22px; gap: 16px; }
+  .service__roman { font-size: 1.9rem; min-width: 38px; }
+  .service__panel-inner { padding: 0 22px 24px; }
+  .service__body { grid-template-columns: 1fr; }
 }
 
 /* CTA propuestas a medida */
 .custom-cta {
   max-width: var(--container);
-  margin: 80px auto 0;
+  margin: 56px auto 0;
   background: var(--c-orange);
   border-radius: var(--radius-card);
   padding: 56px;
@@ -901,7 +947,7 @@ body.menu-open {
 }
 
 .direction {
-  padding: 130px var(--gutter);
+  padding: 92px var(--gutter);
   background: var(--c-cream);
 }
 .direction__grid {
@@ -995,7 +1041,7 @@ body.menu-open {
 
 /* ---------- CONTACTO ---------- */
 .contact {
-  padding: 130px var(--gutter);
+  padding: 92px var(--gutter);
   background: var(--c-navy);
   color: var(--c-cream);
   position: relative;
