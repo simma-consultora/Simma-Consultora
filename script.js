@@ -174,6 +174,25 @@ if (servicesList) {
   requestAnimationFrame(() => servicesList.classList.add("services--ready"));
 }
 
+/* ---------- Pestañas de Planes ---------- */
+const planTabs = document.querySelectorAll(".plans__tab");
+const planPanels = document.querySelectorAll(".plans__panel");
+planTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.tab;
+    planTabs.forEach((t) => {
+      const active = t === tab;
+      t.classList.toggle("is-active", active);
+      t.setAttribute("aria-selected", String(active));
+    });
+    planPanels.forEach((panel) => {
+      const show = panel.dataset.panel === target;
+      panel.classList.toggle("is-active", show);
+      panel.hidden = !show;
+    });
+  });
+});
+
 /* ---------- Formulario de contacto ---------- */
 const form = document.getElementById("contact-form");
 const statusEl = document.getElementById("form-status");

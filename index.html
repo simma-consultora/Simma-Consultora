@@ -69,6 +69,7 @@
 
       <nav class="nav__links" aria-label="Navegación principal">
         <a href="#servicios">Servicios</a>
+        <a href="#planes">Planes</a>
         <a href="#sobre">Sobre SIMMA</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -92,13 +93,18 @@
         <span class="mobile-menu__label">Servicios</span>
         <span class="mobile-menu__arrow" aria-hidden="true">›</span>
       </a>
-      <a href="#sobre" class="mobile-menu__link">
+      <a href="#planes" class="mobile-menu__link">
         <span class="mobile-menu__num">02</span>
+        <span class="mobile-menu__label">Planes</span>
+        <span class="mobile-menu__arrow" aria-hidden="true">›</span>
+      </a>
+      <a href="#sobre" class="mobile-menu__link">
+        <span class="mobile-menu__num">03</span>
         <span class="mobile-menu__label">Sobre SIMMA<span class="dot">.</span></span>
         <span class="mobile-menu__arrow" aria-hidden="true">›</span>
       </a>
       <a href="#contacto" class="mobile-menu__link">
-        <span class="mobile-menu__num">03</span>
+        <span class="mobile-menu__num">04</span>
         <span class="mobile-menu__label">Contacto</span>
         <span class="mobile-menu__arrow" aria-hidden="true">›</span>
       </a>
@@ -419,6 +425,160 @@
         que buscan profesionalizar su comunicación, sus vínculos institucionales y la experiencia que brindan.
       </p>
     </div>
+  </section>
+
+  <!-- ============ PLANES / PAQUETES ============ -->
+  <section class="plans" id="planes">
+    <header class="plans__header">
+      <p class="section-eyebrow">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#asterisk" /></svg>
+        Planes
+      </p>
+      <h2 class="plans__title">
+        Paquetes para <em>profesionalizar</em> tu marca.
+      </h2>
+      <p class="plans__lead">
+        Dos líneas de trabajo pensadas para gastronomía y hospitalidad. Elegí la que necesitás hoy.
+      </p>
+
+      <div class="plans__tabs" role="tablist" aria-label="Líneas de planes">
+        <button class="plans__tab is-active" role="tab" id="tab-redes" aria-selected="true" aria-controls="panel-redes" data-tab="redes" type="button">
+          Comunicación + Redes
+        </button>
+        <button class="plans__tab" role="tab" id="tab-cx" aria-selected="false" aria-controls="panel-cx" data-tab="cx" type="button">
+          Experiencia del cliente
+        </button>
+      </div>
+    </header>
+
+    <!-- Panel: Redes -->
+    <div class="plans__panel is-active" id="panel-redes" role="tabpanel" aria-labelledby="tab-redes" data-panel="redes">
+      <div class="plans__grid">
+
+        <article class="plan">
+          <h3 class="plan__name">Básico</h3>
+          <p class="plan__for">Para quienes quieren empezar a profesionalizar su marca.</p>
+          <div class="plan__price">
+            <span class="plan__amount">$490.000</span>
+            <span class="plan__period">inversión inicial · 45 días</span>
+            <span class="plan__extra">+ $340.000 /mes de mantenimiento</span>
+          </div>
+          <ul class="plan__features">
+            <li>Diagnóstico: informe descriptivo</li>
+            <li>Guía de Identidad + Estructura de Canales</li>
+            <li>Redes: calendario y subida de contenido</li>
+            <li>2 historias y 2 posteos o reels por semana</li>
+            <li>1 sesión de fotos de 1 h /mes</li>
+            <li>Reunión de seguimiento: 30 min /mes</li>
+          </ul>
+          <a href="#contacto" class="btn btn--ghost plan__cta">Consultar<span class="btn__arrow" aria-hidden="true">›</span></a>
+        </article>
+
+        <article class="plan plan--featured">
+          <span class="plan__badge">Recomendado</span>
+          <h3 class="plan__name">Intermedio</h3>
+          <p class="plan__for">Para marcas que buscan dar un salto en estrategia y coherencia.</p>
+          <div class="plan__price">
+            <span class="plan__amount">$890.000</span>
+            <span class="plan__period">inversión inicial · 45 días</span>
+            <span class="plan__extra">+ $500.000 /mes de mantenimiento</span>
+          </div>
+          <ul class="plan__features">
+            <li>Diagnóstico: Informe Semáforo y Mapa + recomendaciones</li>
+            <li>Guía de Identidad + Estructura de Canales</li>
+            <li>Gestión de Vínculos: Guía de Hospitalidad</li>
+            <li>Redes: calendario y subida de contenido</li>
+            <li>3 historias y 3 posteos o reels por semana</li>
+            <li>1 sesión de fotos de 1 h /mes</li>
+            <li>Reunión de seguimiento: 60 min /mes</li>
+          </ul>
+          <a href="#contacto" class="btn btn--primary plan__cta">Consultar<span class="btn__arrow" aria-hidden="true">›</span></a>
+        </article>
+
+        <article class="plan">
+          <h3 class="plan__name">Avanzado</h3>
+          <p class="plan__for">Para marcas que quieren destacarse y construir una identidad sólida.</p>
+          <div class="plan__price">
+            <span class="plan__amount">$1.160.000</span>
+            <span class="plan__period">inversión inicial · 45 días</span>
+            <span class="plan__extra">+ $710.000 /mes de mantenimiento</span>
+          </div>
+          <ul class="plan__features">
+            <li>Diagnóstico: Informe Semáforo y Mapa + recomendaciones</li>
+            <li>Guía de Identidad + Estructura de Canales</li>
+            <li>Gestión de Vínculos: Guía de Hospitalidad + Plan de Relacionamiento</li>
+            <li>Redes: calendario y subida de contenido</li>
+            <li>5 historias y 3 posteos o reels por semana</li>
+            <li>2 sesiones de fotos de 1 h cada una /mes</li>
+            <li>Reunión de seguimiento: 90 min /mes</li>
+          </ul>
+          <a href="#contacto" class="btn btn--ghost plan__cta">Consultar<span class="btn__arrow" aria-hidden="true">›</span></a>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Panel: Experiencia del cliente -->
+    <div class="plans__panel" id="panel-cx" role="tabpanel" aria-labelledby="tab-cx" data-panel="cx" hidden>
+      <div class="plans__grid">
+
+        <article class="plan">
+          <h3 class="plan__name">Básico</h3>
+          <p class="plan__for">Para locales que necesitan ordenar procesos desde cero.</p>
+          <div class="plan__price">
+            <span class="plan__amount">$480.000</span>
+            <span class="plan__period">1 mes de trabajo</span>
+          </div>
+          <ul class="plan__features">
+            <li>Diagnóstico: informe descriptivo</li>
+            <li>Guía de Identidad + Estructura de Canales</li>
+            <li>Diseño y optimización de procesos tradicionales (SOPs y manuales)</li>
+          </ul>
+          <a href="#contacto" class="btn btn--ghost plan__cta">Consultar<span class="btn__arrow" aria-hidden="true">›</span></a>
+        </article>
+
+        <article class="plan plan--featured">
+          <span class="plan__badge">Recomendado</span>
+          <h3 class="plan__name">Intermedio</h3>
+          <p class="plan__for">Para marcas que buscan mejorar operaciones y decidir con datos.</p>
+          <div class="plan__price">
+            <span class="plan__amount">$990.000</span>
+            <span class="plan__period">2 meses de trabajo</span>
+          </div>
+          <ul class="plan__features">
+            <li>Diagnóstico: Informe Semáforo y Mapa + recomendaciones</li>
+            <li>Guía de Identidad + Estructura de Canales</li>
+            <li>Gestión de Vínculos: Guía de Hospitalidad</li>
+            <li>Diseño y optimización de procesos (mapas + SOPs + manuales)</li>
+            <li>Adopción u optimización de herramientas digitales (CRM, reservas, inventario)</li>
+          </ul>
+          <a href="#contacto" class="btn btn--primary plan__cta">Consultar<span class="btn__arrow" aria-hidden="true">›</span></a>
+        </article>
+
+        <article class="plan">
+          <h3 class="plan__name">Avanzado</h3>
+          <p class="plan__for">Para locales que quieren transformar su operación por completo.</p>
+          <div class="plan__price">
+            <span class="plan__amount">$1.210.000</span>
+            <span class="plan__period">3 meses de trabajo</span>
+          </div>
+          <ul class="plan__features">
+            <li>Diagnóstico: Informe Semáforo y Mapa + recomendaciones</li>
+            <li>Guía de Identidad + Estructura de Canales</li>
+            <li>Gestión de Vínculos: Guía de Hospitalidad + Plan de Relacionamiento</li>
+            <li>Diseño y optimización de procesos tradicionales</li>
+            <li>Adopción u optimización de herramientas digitales</li>
+            <li>Análisis de datos y Business Intelligence (dashboards y reportes mensuales)</li>
+          </ul>
+          <a href="#contacto" class="btn btn--ghost plan__cta">Consultar<span class="btn__arrow" aria-hidden="true">›</span></a>
+        </article>
+
+      </div>
+    </div>
+
+    <p class="plans__note">
+      Los planes con redes suman una inversión inicial (45 días) más un mantenimiento mensual; el canon se ajusta un 20&nbsp;% cada 3 meses, con aviso 15 días antes. Gran Mendoza incluido; fuera del Gran Mendoza, viáticos contra factura. Toda pieza o servicio fuera del paquete se cotiza por separado.
+    </p>
   </section>
 
   <!-- ============ SOBRE SIMMA ============ -->
